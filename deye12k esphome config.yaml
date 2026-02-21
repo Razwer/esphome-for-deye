@@ -156,137 +156,137 @@ switch:
     icon: "mdi:toggle-switch"
 
 binary_sensor:
-   - platform: modbus_controller
-     modbus_controller_id: ${modbus_controller_id}
-     name: sun3p_peak_shaving_0 # bit 0
-     id: sun3p_peak_shaving_0
-     register_type: holding
-     address: 146
-     bitmask: 0x1
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: sun3p_peak_shaving_0 # bit 0
+    id: sun3p_peak_shaving_0
+    register_type: holding
+    address: 146
+    bitmask: 0x1
 
-   - platform: modbus_controller
-     modbus_controller_id: ${modbus_controller_id}
-     name: sun3p_peak_shaving_1 # bit 1
-     id: sun3p_peak_shaving_1
-     register_type: holding
-     address: 146
-     bitmask: 0x2
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: sun3p_peak_shaving_1 # bit 1
+    id: sun3p_peak_shaving_1
+    register_type: holding
+    address: 146
+    bitmask: 0x2
 
-   - platform: modbus_controller
-     modbus_controller_id: ${modbus_controller_id}
-     name: sun3p_peak_shaving_2 # bit 2
-     id: sun3p_peak_shaving_2
-     register_type: holding
-     address: 146
-     bitmask: 0x4
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: sun3p_peak_shaving_2 # bit 2
+    id: sun3p_peak_shaving_2
+    register_type: holding
+    address: 146
+    bitmask: 0x4
 
-   - platform: modbus_controller
-     modbus_controller_id: ${modbus_controller_id}
-     name: sun3p_peak_shaving_3 # bit 3
-     id: sun3p_peak_shaving_3
-     register_type: holding
-     address: 146
-     bitmask: 0x8
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: sun3p_peak_shaving_3 # bit 3
+    id: sun3p_peak_shaving_3
+    register_type: holding
+    address: 146
+    bitmask: 0x8
 
-   - platform: modbus_controller
-     modbus_controller_id: ${modbus_controller_id}
-     name: sun3p_peak_shaving_4 # bit 3
-     id: sun3p_peak_shaving_4
-     register_type: holding
-     address: 146
-     bitmask: 0x10
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: sun3p_peak_shaving_4 # bit 3
+    id: sun3p_peak_shaving_4
+    register_type: holding
+    address: 146
+    bitmask: 0x10
 
-   - platform: modbus_controller
-     modbus_controller_id: ${modbus_controller_id}
-     name: sun3p_peak_shaving_5 # bit 3
-     id: sun3p_peak_shaving_5
-     register_type: holding
-     address: 146
-     bitmask: 0x20     
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: sun3p_peak_shaving_5 # bit 3
+    id: sun3p_peak_shaving_5
+    register_type: holding
+    address: 146
+    bitmask: 0x20
 
-   - platform: modbus_controller
-     modbus_controller_id: ${modbus_controller_id}
-     name: sun3p_peak_shaving_6 # bit 3
-     id: sun3p_peak_shaving_6
-     register_type: holding
-     address: 146
-     bitmask: 0x40 
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: sun3p_peak_shaving_6 # bit 3
+    id: sun3p_peak_shaving_6
+    register_type: holding
+    address: 146
+    bitmask: 0x40
 
-   - platform: modbus_controller
-     modbus_controller_id: ${modbus_controller_id}
-     name: sun3p_peak_shaving_7 # bit 3
-     id: sun3p_peak_shaving_7
-     register_type: holding
-     address: 146
-     bitmask: 0x80
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: sun3p_peak_shaving_7 # bit 3
+    id: sun3p_peak_shaving_7
+    register_type: holding
+    address: 146
+    bitmask: 0x80
 
-   - platform: modbus_controller
-     modbus_controller_id: ${modbus_controller_id}
-     name: sun3p-AC INV relay # bit 0
-     id: sun3p_AC_INV_relay
-     register_type: holding
-     address: 552
-     bitmask: 0x1
- 
-   - platform: modbus_controller
-     modbus_controller_id: ${modbus_controller_id}
-     name: sun3p-AC Load relay Reserved # bit 1
-     id: sun3p_AC_Load_relay_Reserved
-     register_type: holding
-     address: 552
-     bitmask: 0x2
- 
-   - platform: modbus_controller
-     modbus_controller_id: ${modbus_controller_id}
-     name: sun3p-AC grid relay # bit 2
-     id: sun3p_AC_grid_relay
-     register_type: holding
-     address: 552
-     bitmask: 0x4
- 
-   - platform: modbus_controller
-     modbus_controller_id: ${modbus_controller_id}
-     name: sun3p-AC Generator relay # bit 3
-     id: sun3p_AC_Generator_relay
-     register_type: holding
-     address: 552
-     bitmask: 0x8
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: sun3p-AC INV relay # bit 0
+    id: sun3p_AC_INV_relay
+    register_type: holding
+    address: 552
+    bitmask: 0x1
 
-   - platform: modbus_controller
-     modbus_controller_id: ${modbus_controller_id}
-     name: sun3p-AC grid relay power # bit 4
-     id: sun3p_AC_relay_power
-     register_type: holding
-     address: 552
-     bitmask: 0x10
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: sun3p-AC Load relay Reserved # bit 1
+    id: sun3p_AC_Load_relay_Reserved
+    register_type: holding
+    address: 552
+    bitmask: 0x2
 
-   - platform: modbus_controller
-     modbus_controller_id: ${modbus_controller_id}
-     name: sun3p-AC drycontact1 relay # bit 7
-     id: sun3p_AC_drycontact1_relay
-     register_type: holding
-     address: 552
-     bitmask: 0x80
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: sun3p-AC grid relay # bit 2
+    id: sun3p_AC_grid_relay
+    register_type: holding
+    address: 552
+    bitmask: 0x4
 
-   - platform: modbus_controller
-     modbus_controller_id: ${modbus_controller_id}
-     name: sun3p-AC drycontact2 relay # bit 8
-     id: sun3p_AC_drycontact2_relay
-     register_type: holding
-     address: 552
-     bitmask: 0x100
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: sun3p-AC Generator relay # bit 3
+    id: sun3p_AC_Generator_relay
+    register_type: holding
+    address: 552
+    bitmask: 0x8
 
-   - platform: modbus_controller
-     modbus_controller_id: ${modbus_controller_id}
-     name: sun3p-Turn off/on status   #The lower 4 bits represent the switch signal
-     id: sun3p_Turn_off_on_status
-     register_type: holding
-     address: 551
-     bitmask: 0x1
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: sun3p-AC grid relay power # bit 4
+    id: sun3p_AC_relay_power
+    register_type: holding
+    address: 552
+    bitmask: 0x10
+
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: sun3p-AC drycontact1 relay # bit 7
+    id: sun3p_AC_drycontact1_relay
+    register_type: holding
+    address: 552
+    bitmask: 0x80
+
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: sun3p-AC drycontact2 relay # bit 8
+    id: sun3p_AC_drycontact2_relay
+    register_type: holding
+    address: 552
+    bitmask: 0x100
+
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: sun3p-Turn off/on status   #The lower 4 bits represent the switch signal
+    id: sun3p_Turn_off_on_status
+    register_type: holding
+    address: 551
+    bitmask: 0x1
  
 text_sensor:
-   - platform: modbus_controller
-     modbus_controller_id: ${modbus_controller_id}
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
      id: sun3p_Running_Status
      bitmask: 0
      register_type: holding
@@ -923,16 +923,16 @@ sensor:
     accuracy_decimals: 0
     value_type: U_WORD
  
-   - platform: modbus_controller
-     modbus_controller_id: ${modbus_controller_id}
-     name: "sun3p-PV2 Power"
-     id: sun3p_PV2_Power
-     register_type: holding
-     address: 673
-     unit_of_measurement: "W"
-     state_class: "measurement"
-     accuracy_decimals: 0
-     value_type: U_WORD
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "sun3p-PV2 Power"
+    id: sun3p_PV2_Power
+    register_type: holding
+    address: 673
+    unit_of_measurement: "W"
+    state_class: "measurement"
+    accuracy_decimals: 0
+    value_type: U_WORD
  
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
@@ -947,17 +947,17 @@ sensor:
       - multiply: 0.1
     value_type: U_WORD
  
-   - platform: modbus_controller
-     modbus_controller_id: ${modbus_controller_id}
-     name: "sun3p-PV2 Voltage"
-     id: sun3p_PV2_Voltage
-     register_type: holding
-     address: 678
-     unit_of_measurement: "V"
-     state_class: "measurement"
-     accuracy_decimals: 0
-     filters:
-       - multiply: 0.1
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "sun3p-PV2 Voltage"
+    id: sun3p_PV2_Voltage
+    register_type: holding
+    address: 678
+    unit_of_measurement: "V"
+    state_class: "measurement"
+    accuracy_decimals: 0
+    filters:
+      - multiply: 0.1
      value_type: U_WORD
  
   - platform: modbus_controller
@@ -973,9 +973,9 @@ sensor:
       - multiply: 0.1
     value_type: U_WORD
  
-   - platform: modbus_controller
-     modbus_controller_id: ${modbus_controller_id}
-     name: "sun3p-PV2 Current"
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "sun3p-PV2 Current"
      id: sun3p_PV2_Current
      register_type: holding
      address: 679
