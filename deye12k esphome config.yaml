@@ -1111,7 +1111,223 @@ sensor:
       - multiply: 0.01
     value_type: S_WORD   
  
-  # Batteri
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "sun3p-Grid Voltage L1"
+    id: sun3p_Grid_Voltage_L1
+    register_type: holding
+    address: 598
+    unit_of_measurement: "V"
+    state_class: "measurement"
+    accuracy_decimals: 0
+    filters:
+      - multiply: 0.1
+    value_type: U_WORD     
+ 
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "sun3p-Grid Voltage L2"
+    id: sun3p_Grid_Voltage_L2
+    register_type: holding
+    address: 599
+    unit_of_measurement: "V"
+    state_class: "measurement"
+    accuracy_decimals: 0
+    filters:
+      - multiply: 0.1
+    value_type: U_WORD     
+ 
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "sun3p-Grid Voltage L3"
+    id: sun3p_Grid_Voltage_L3
+    register_type: holding
+    address: 600
+    unit_of_measurement: "V"
+    state_class: "measurement"
+    accuracy_decimals: 0
+    filters:
+      - multiply: 0.1
+    value_type: U_WORD  
+
+ 
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "sun3p-Internal CT L1 Power"
+    id: sun3p_Internal_CT_L1_Power
+    register_type: holding
+    address: 604
+    unit_of_measurement: "W"
+    state_class: "measurement"
+    accuracy_decimals: 0
+    value_type: S_WORD  
+ 
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "sun3p-Internal CT L2 Power"
+    id: sun3p_Internal_CT_L2_Power
+    register_type: holding
+    address: 605
+    unit_of_measurement: "W"
+    state_class: "measurement"
+    accuracy_decimals: 0
+    value_type: S_WORD  
+ 
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "sun3p-Internal CT L3 Power"
+    id: sun3p_Internal_CT_L3_Power
+    register_type: holding
+    address: 606
+    unit_of_measurement: "W"
+    state_class: "measurement"
+    accuracy_decimals: 0
+    value_type: S_WORD  
+ 
+  - platform: modbus_controller  # Grid internal - total active power
+    modbus_controller_id: ${modbus_controller_id}
+    name: "sun3p-Internal total Power" 
+    id: sun3p_Internal_total_Power
+    register_type: holding
+    address: 607
+    unit_of_measurement: "W"
+    state_class: "measurement"
+    accuracy_decimals: 0
+    value_type: S_WORD   
+ 
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "sun3p-External CT L1 Power"
+    id: sun3p_External_CT_L1_Power
+    register_type: holding
+    address: 616
+    unit_of_measurement: "W"
+    state_class: "measurement"
+    accuracy_decimals: 0
+    value_type: S_WORD  
+ 
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "sun3p-External CT L2 Power"
+    id: sun3p_External_CT_L2_Power
+    register_type: holding
+    address: 617
+    unit_of_measurement: "W"
+    state_class: "measurement"
+    accuracy_decimals: 0
+    value_type: S_WORD  
+ 
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "sun3p-External CT L3 Power"
+    id: sun3p_External_CT_L3_Power
+    register_type: holding
+    address: 618
+    unit_of_measurement: "W"
+    state_class: "measurement"
+    accuracy_decimals: 0
+    value_type: S_WORD     
+ 
+  - platform: modbus_controller  
+    modbus_controller_id: ${modbus_controller_id}
+    name: "sun3p-Out-of-grid–total power"
+    id: sun3p_out_of_grid_total_power
+    register_type: holding
+    address: 619
+    unit_of_measurement: "W"
+    state_class: "measurement"
+    accuracy_decimals: 0
+    value_type: S_WORD
+    
+  - platform: modbus_controller # Load totalpower
+    modbus_controller_id: ${modbus_controller_id}
+    name: "sun3p-Load totalpower" 
+    id: sun3p_Load_totalpower
+    register_type: holding
+    address: 653
+    unit_of_measurement: "W"
+    state_class: "measurement"
+    accuracy_decimals: 0
+    value_type: S_WORD
+ 
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "sun3p-Warning1"
+    id:  sun3p_Warning1
+    register_type: holding
+    address: 553
+    accuracy_decimals: 0
+    value_type: U_WORD
+ 
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "sun3p-Warning2"
+    id:  sun3p_Warning2
+    register_type: holding
+    address: 554
+    accuracy_decimals: 0
+    value_type: U_WORD
+ 
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "sun3p-Warning3"
+    id:  sun3p_Warning3
+    register_type: holding
+    address: 555
+    accuracy_decimals: 0
+    value_type: U_WORD
+ 
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "sun3p-Error1"
+    id:  sun3p_Error1
+    register_type: holding
+    address: 556
+    accuracy_decimals: 0
+    value_type: U_WORD
+ 
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "sun3p-Error2"
+    id:  sun3p_Error2
+    register_type: holding
+    address: 557
+    accuracy_decimals: 0
+    value_type: U_WORD
+ 
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "sun3p-Error3"
+    id:  sun3p_Error3
+    register_type: holding
+    address: 558
+    accuracy_decimals: 0
+    value_type: U_WORD
+ 
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "sun3p-Failure status of communication board"
+    id:  sun3p_Failure_status_of_communication_board
+    register_type: holding
+    address: 548
+    accuracy_decimals: 0
+    value_type: U_WORD
+ 
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "sun3p-Minimum insulation impedance"
+    id:  sun3p_Minimum_insulation_impedance
+    register_type: holding
+    unit_of_measurement: "kΩ"
+    state_class: "measurement"
+    address: 65
+    accuracy_decimals: 0
+    value_type: U_WORD
+    filters:
+      - multiply: 0.1
+
+
+  # Batterij
  
   - platform: modbus_controller
     modbus_controller_id: ${modbus_controller_id}
