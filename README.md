@@ -1,5 +1,5 @@
 # esphome-for-deye
-Adapted for original to work with Deye SUN-10K-SG05LP3-EU-SM2 10kW
+Adapted from original to work with Deye SUN-10K-SG05LP3-EU-SM2 10kW
 
 For use with ESP32 & TTL To RS485 Module with automatic flow control.
 I powered the esp32 from CN2 pin 7&8 with 12V into a USB converter.
