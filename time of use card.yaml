@@ -4,7 +4,7 @@ type: grid
 cards:
   - type: entities
     entities:
-      - entity: switch.deye_inverter_sun3p_time_point_1_charge_enable
+      - entity: switch.liligo_deye_sun3p_time_point_1_charge_enable
         type: custom:multiple-entity-row
         name: Slot 1
         styles:
@@ -14,25 +14,25 @@ cards:
         state_header: Charge
         state_color: true
         entities:
-          - entity: select.deye_inverter_sun3p_time_point_1_start
+          - entity: select.liligo_deye_sun3p_time_point_1_start
             name: From
             styles:
               width: 60px
               text-align: center
             format: precision0
-          - entity: number.deye_inverter_sun3p_time_point_1_power
+          - entity: number.liligo_deye_sun3p_time_point_1_power
             name: Power
             styles:
               width: 60px
               text-align: center
             format: precision0
-          - entity: number.deye_inverter_sun3p_time_point_1_capacity
+          - entity: number.liligo_deye_sun3p_time_point_1_capacity
             name: Accu %
             styles:
               width: 60px
               text-align: center
             format: precision0
-      - entity: switch.deye_inverter_sun3p_time_point_2_charge_enable
+      - entity: switch.liligo_deye_sun3p_time_point_2_charge_enable
         type: custom:multiple-entity-row
         name: Slot 2
         styles:
@@ -42,25 +42,25 @@ cards:
         state_header: Charge
         state_color: true
         entities:
-          - entity: select.deye_inverter_sun3p_time_point_2_start
+          - entity: select.liligo_deye_sun3p_time_point_2_start
             name: From
             styles:
               width: 60px
               text-align: center
             format: precision0
-          - entity: number.deye_inverter_sun3p_time_point_2_power
+          - entity: number.liligo_deye_sun3p_time_point_2_power
             name: Power
             styles:
               width: 60px
               text-align: center
             format: precision0
-          - entity: number.deye_inverter_sun3p_time_point_2_capacity
+          - entity: number.liligo_deye_sun3p_time_point_2_capacity
             name: Accu %
             styles:
               width: 60px
               text-align: center
             format: precision0
-      - entity: switch.deye_inverter_sun3p_time_point_3_charge_enable
+      - entity: switch.liligo_deye_sun3p_time_point_3_charge_enable
         type: custom:multiple-entity-row
         name: Slot 3
         styles:
@@ -70,25 +70,25 @@ cards:
         state_header: Charge
         state_color: true
         entities:
-          - entity: select.deye_inverter_sun3p_time_point_3_start
+          - entity: select.liligo_deye_sun3p_time_point_3_start
             name: From
             styles:
               width: 60px
               text-align: center
             format: precision0
-          - entity: number.deye_inverter_sun3p_time_point_3_power
+          - entity: number.liligo_deye_sun3p_time_point_3_power
             name: Power
             styles:
               width: 60px
               text-align: center
             format: precision0
-          - entity: number.deye_inverter_sun3p_time_point_3_capacity
+          - entity: number.liligo_deye_sun3p_time_point_3_capacity
             name: Accu %
             styles:
               width: 60px
               text-align: center
             format: precision0
-      - entity: switch.deye_inverter_sun3p_time_point_4_charge_enable
+      - entity: switch.liligo_deye_sun3p_time_point_4_charge_enable
         type: custom:multiple-entity-row
         name: Slot 4
         styles:
@@ -98,25 +98,25 @@ cards:
         state_header: Charge
         state_color: true
         entities:
-          - entity: select.deye_inverter_sun3p_time_point_4_start
+          - entity: select.liligo_deye_sun3p_time_point_4_start
             name: From
             styles:
               width: 60px
               text-align: center
             format: precision0
-          - entity: number.deye_inverter_sun3p_time_point_4_power
+          - entity: number.liligo_deye_sun3p_time_point_4_power
             name: Power
             styles:
               width: 60px
               text-align: center
             format: precision0
-          - entity: number.deye_inverter_sun3p_time_point_4_capacity
+          - entity: number.liligo_deye_sun3p_time_point_4_capacity
             name: Accu %
             styles:
               width: 60px
               text-align: center
             format: precision0
-      - entity: switch.deye_inverter_sun3p_time_point_5_charge_enable
+      - entity: switch.liligo_deye_sun3p_time_point_5_charge_enable
         type: custom:multiple-entity-row
         name: Slot 5
         styles:
@@ -126,25 +126,25 @@ cards:
         state_header: Charge
         state_color: true
         entities:
-          - entity: select.deye_inverter_sun3p_time_point_5_start
+          - entity: select.liligo_deye_sun3p_time_point_5_start
             name: From
             styles:
               width: 60px
               text-align: center
             format: precision0
-          - entity: number.deye_inverter_sun3p_time_point_5_power
+          - entity: number.liligo_deye_sun3p_time_point_5_power
             name: Power
             styles:
               width: 60px
               text-align: center
             format: precision0
-          - entity: number.deye_inverter_sun3p_time_point_5_capacity
+          - entity: number.liligo_deye_sun3p_time_point_5_capacity
             name: Accu %
             styles:
               width: 60px
               text-align: center
             format: precision0
-      - entity: switch.deye_inverter_sun3p_time_point_6_charge_enable
+      - entity: switch.liligo_deye_sun3p_time_point_6_charge_enable
         type: custom:multiple-entity-row
         name: Slot 6
         styles:
@@ -154,19 +154,19 @@ cards:
         state_header: Charge
         state_color: true
         entities:
-          - entity: select.deye_inverter_sun3p_time_point_6_start
+          - entity: select.liligo_deye_sun3p_time_point_6_start
             name: From
             styles:
               width: 60px
               text-align: center
             format: precision0
-          - entity: number.deye_inverter_sun3p_time_point_6_power
+          - entity: number.liligo_deye_sun3p_time_point_6_power
             name: Power
             styles:
               width: 60px
               text-align: center
             format: precision0
-          - entity: number.deye_inverter_sun3p_time_point_6_capacity
+          - entity: number.liligo_deye_sun3p_time_point_6_capacity
             name: Accu %
             styles:
               width: 60px
@@ -174,9 +174,9 @@ cards:
             format: precision0
   - type: entities
     entities:
-      - entity: switch.deye_inverter_sun3p_time_of_use
-      - entity: switch.deye_inverter_sun3p_grid_charge
-      - entity: select.deye_inverter_sun3p_limit_control_mode
+      - entity: switch.liligo_deye_sun3p_time_of_use
+      - entity: switch.liligo_deye_sun3p_grid_charge
+      - entity: select.liligo_deye_sun3p_limit_control_mode
         name: Limit Mode
-      - entity: number.deye_inverter_sun3p_maximum_battery_discharge_current
-      - entity: number.deye_inverter_sun3p_maximum_battery_charge_current
+      - entity: number.liligo_deye_sun3p_maximum_battery_discharge_current
+      - entity: number.liligo_deye_sun3p_maximum_battery_charge_current
