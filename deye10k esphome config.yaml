@@ -63,7 +63,17 @@ switch:
     bitmask: 1
     entity_category: config
     icon: "mdi:toggle-switch"
- 
+
+  - platform: modbus_controller
+    use_write_multiple: true
+    modbus_controller_id: ${modbus_controller_id}  
+    name: sun3p-Peak_Shaving_mode
+    register_type: holding
+    address: 178
+    bitmask: 0x10  # Bit 4 regelt de Peak Shaving toggle op 3-fase modellen
+    entity_category: config
+    icon: "mdi:flash-outline"
+
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
@@ -534,6 +544,19 @@ select:
       "24:00": 2400
 
 number:
+  - platform: modbus_controller
+    use_write_multiple: true
+    modbus_controller_id: ${modbus_controller_id}
+    id: sun3p_Grid_Peak_Shaving_Power
+    name: "sun3p-Grid Peak Shaving Power"
+    address: 191
+    step: 100
+    unit_of_measurement: W
+    min_value: 0
+    max_value: 30000    
+    mode: slider
+    value_type: U_WORD
+
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
