@@ -68,6 +68,38 @@ switch:
     restore_mode: ALWAYS_ON
     internal: true
 
+  # --- NEW: PV Disable/Enable Switches ---
+  - platform: modbus_controller
+    use_write_multiple: true
+    modbus_controller_id: ${modbus_controller_id}
+    name: sun3p-MPPT Enable
+    register_type: holding
+    address: 84
+    bitmask: 1
+    entity_category: config
+    icon: "mdi:solar-power"
+
+  - platform: modbus_controller
+    use_write_multiple: true
+    modbus_controller_id: ${modbus_controller_id}
+    name: sun3p-Solar 1 Enable
+    register_type: holding
+    address: 310
+    bitmask: 0x1
+    entity_category: config
+    icon: "mdi:solar-panel-large"
+
+  - platform: modbus_controller
+    use_write_multiple: true
+    modbus_controller_id: ${modbus_controller_id}
+    name: sun3p-Solar 2 Enable
+    register_type: holding
+    address: 310
+    bitmask: 0x2
+    entity_category: config
+    icon: "mdi:solar-panel-large"
+  # ---------------------------------------
+
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
@@ -990,6 +1022,23 @@ select:
       "24:00": 2400
 
 number:
+  # --- NEW: Active Power Throttle ---
+  - platform: modbus_controller
+    use_write_multiple: true
+    modbus_controller_id: ${modbus_controller_id}
+    id: sun3p_Active_Power_Regulation
+    name: "sun3p-Active Power Regulation"
+    address: 77
+    step: 1
+    unit_of_measurement: "%"
+    min_value: 0
+    max_value: 100
+    mode: slider
+    value_type: U_WORD
+    lambda: "return x * 0.1;"
+    write_lambda: "return x * 10;"
+  # ----------------------------------
+
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
