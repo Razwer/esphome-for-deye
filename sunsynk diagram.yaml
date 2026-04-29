@@ -1,0 +1,114 @@
+type: custom:sunsynk-power-flow-card
+cardstyle: full
+wide: true
+large_font: true
+show_battery: true
+show_solar: true
+show_grid: true
+grid_options:
+  columns: full
+solar:
+  mppts: 2
+  show_daily: true
+  max_power: 12000
+  pv1_name: String 1
+  pv2_name: String 2
+  pv1_max_power: 8000
+  pv2_max_power: 4000
+  efficiency: 3
+  display_mode: 3
+inverter:
+  modern: false
+  model: deye-new
+  autarky: power
+  auto_scale: true
+  three_phase: true
+  colour: "#ffffff"
+battery:
+  energy: 16000
+  max_power: 12000
+  count: 2
+  hide_soc: false
+  show_remaining_energy: true
+  animate: true
+  dynamic_colour: true
+  linear_gradient: true
+  remaining_energy_to_shutdown: false
+  shutdown_soc: 15
+battery2:
+  energy: 16000
+  max_power: 12000
+  hide_soc: false
+  show_remaining_energy: true
+  animate: true
+  dynamic_colour: true
+  linear_gradient: true
+  remaining_energy_to_shutdown: false
+  shutdown_soc: 15
+load:
+  show_daily: true
+  max_power: 12000
+  essential_name: Huis
+  label_daily_load: Dagelijks verbruik
+grid:
+  grid_name: Zonneplan
+  show_daily_buy: true
+  show_nonessential: false
+  max_power: 21000
+  show_daily_sell: true
+  label_daily_grid_sell: Verkocht vandaag
+  label_daily_grid_buy: Gekocht vandaag
+entities:
+  inverter_status_59: sensor.deye_inverter_sun3p_running_status
+  priority_load_243: select.deye_inverter_sun3p_limit_control_mode
+  grid_ct_power_172: sensor.deye_inverter_sun3p_internal_ct_l1_power
+  grid_ct_power_L2: sensor.deye_inverter_sun3p_internal_ct_l2_power
+  grid_ct_power_L3: sensor.deye_inverter_sun3p_internal_ct_l3_power
+  max_sell_power: number.deye_inverter_sun3p_maximum_solar_sell
+  grid_power_169: sensor.deye_inverter_sun3p_total_grid_power
+  essential_power: sensor.deye_inverter_sun3p_load_totalpower
+  inverter_voltage_154: sensor.deye_inverter_sun3p_grid_voltage_l1
+  inverter_voltage_L2: sensor.deye_inverter_sun3p_grid_voltage_l2
+  inverter_voltage_L3: sensor.deye_inverter_sun3p_grid_voltage_l3
+  inverter_current_164: sensor.deye_inverter_sun3p_grid_current_l1
+  inverter_current_L2: sensor.deye_inverter_sun3p_grid_current_l2
+  inverter_current_L3: sensor.deye_inverter_sun3p_grid_current_l3
+  radiator_temp_91: sensor.deye_inverter_sun3p_heat_sink_temperature
+  battery_voltage_183: sensor.deye_inverter_sun3p_battery_voltage
+  battery_soc_184: sensor.deye_inverter_sun3p_battery_capacity
+  battery_power_190: sensor.deye_inverter_sun3p_battery_output_power
+  battery_current_191: sensor.deye_inverter_sun3p_battery_output_current
+  battery_temp_182: sensor.deye_inverter_sun3p_battery_temperature
+  battery2_voltage_183: sensor.deye_inverter_sun3p_battery_voltage
+  battery2_soc_184: sensor.deye_inverter_sun3p_battery_capacity
+  battery2_power_190: sensor.deye_inverter_sun3p_battery_output_power
+  battery2_current_191: sensor.deye_inverter_sun3p_battery_output_current
+  battery2_temp_182: sensor.deye_inverter_sun3p_battery_temperature
+  pv1_power_186: sensor.deye_inverter_sun3p_pv1_power
+  pv2_power_187: sensor.deye_inverter_sun3p_pv2_power
+  pv1_voltage_109: sensor.deye_inverter_sun3p_pv1_voltage
+  pv1_current_110: sensor.deye_inverter_sun3p_pv1_current
+  pv2_voltage_111: sensor.deye_inverter_sun3p_pv2_voltage
+  pv2_current_112: sensor.deye_inverter_sun3p_pv2_current
+  solar_sell_247: switch.deye_inverter_sun3p_solar_sell
+  total_pv_generation: sensor.deye_inverter_sun3p_total_pv_production
+  day_pv_energy_108: sensor.deye_inverter_sun3p_daily_production
+  day_battery_charge_70: sensor.deye_inverter_sun3p_today_charge_of_the_battery
+  day_battery_discharge_71: sensor.deye_inverter_sun3p_today_discharge_of_the_battery
+  day_load_energy_84: sensor.deye_inverter_sun3p_daily_consumption
+  day_grid_import_76: sensor.deye_inverter_sun3p_daily_energy_bought
+  day_grid_export_77: sensor.deye_inverter_sun3p_daily_energy_sold
+  grid_connected_status_194: binary_sensor.deye_inverter_sun3p_ac_grid_relay
+  use_timer_248: switch.deye_inverter_sun3p_time_of_use
+  prog1_capacity: number.deye_inverter_sun3p_time_point_1_capacity
+  prog2_capacity: number.deye_inverter_sun3p_time_point_2_capacity
+  prog3_capacity: number.deye_inverter_sun3p_time_point_3_capacity
+  prog4_capacity: number.deye_inverter_sun3p_time_point_4_capacity
+  prog5_capacity: number.deye_inverter_sun3p_time_point_5_capacity
+  prog6_capacity: number.deye_inverter_sun3p_time_point_6_capacity
+  prog1_charge: switch.deye_inverter_sun3p_time_point_1_charge_enable
+  prog2_charge: switch.deye_inverter_sun3p_time_point_2_charge_enable
+  prog3_charge: switch.deye_inverter_sun3p_time_point_3_charge_enable
+  prog4_charge: switch.deye_inverter_sun3p_time_point_4_charge_enable
+  prog5_charge: switch.deye_inverter_sun3p_time_point_5_charge_enable
+  prog6_charge: switch.deye_inverter_sun3p_time_point_6_charge_enable

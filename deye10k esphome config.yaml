@@ -68,38 +68,6 @@ switch:
     restore_mode: ALWAYS_ON
     internal: true
 
-  # --- NEW: PV Disable/Enable Switches ---
-  - platform: modbus_controller
-    use_write_multiple: true
-    modbus_controller_id: ${modbus_controller_id}
-    name: sun3p-MPPT Enable
-    register_type: holding
-    address: 84
-    bitmask: 1
-    entity_category: config
-    icon: "mdi:solar-power"
-
-  - platform: modbus_controller
-    use_write_multiple: true
-    modbus_controller_id: ${modbus_controller_id}
-    name: sun3p-Solar 1 Enable
-    register_type: holding
-    address: 310
-    bitmask: 0x1
-    entity_category: config
-    icon: "mdi:solar-panel-large"
-
-  - platform: modbus_controller
-    use_write_multiple: true
-    modbus_controller_id: ${modbus_controller_id}
-    name: sun3p-Solar 2 Enable
-    register_type: holding
-    address: 310
-    bitmask: 0x2
-    entity_category: config
-    icon: "mdi:solar-panel-large"
-  # ---------------------------------------
-
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
@@ -1022,22 +990,20 @@ select:
       "24:00": 2400
 
 number:
-  # --- NEW: Active Power Throttle ---
+  # --- NIEUW: Grid Charge Start SOC (Start %) ---
   - platform: modbus_controller
     use_write_multiple: true
     modbus_controller_id: ${modbus_controller_id}
-    id: sun3p_Active_Power_Regulation
-    name: "sun3p-Active Power Regulation"
-    address: 77
+    id: sun3p_grid_charge_start_soc
+    name: "sun3p-Grid Charge Start %"
+    address: 127
     step: 1
     unit_of_measurement: "%"
     min_value: 0
     max_value: 100
     mode: slider
     value_type: U_WORD
-    lambda: "return x * 0.1;"
-    write_lambda: "return x * 10;"
-  # ----------------------------------
+  # ----------------------------------------------
 
   - platform: modbus_controller
     use_write_multiple: true
@@ -1048,7 +1014,7 @@ number:
     step: 100
     unit_of_measurement: W
     min_value: 0
-    max_value: 30000    
+    max_value: 30000      
     mode: slider
     value_type: U_WORD
 
@@ -1599,6 +1565,20 @@ sensor:
     filters:
       - multiply: 0.1
  
+  - platform: modbus_controller
+    modbus_controller_id: ${modbus_controller_id}
+    name: "sun3p-Daily Consumption"
+    id: sun3p_Daily_Consumption
+    register_type: holding
+    address: 526
+    unit_of_measurement: "kWh"
+    state_class: "total_increasing"
+    device_class: energy
+    accuracy_decimals: 1
+    value_type: U_WORD
+    filters:
+      - multiply: 0.1
+
   - platform: modbus_controller #Total Consumption
     modbus_controller_id: ${modbus_controller_id}
     name: "sun3p-Total Consumption"
